@@ -1,4 +1,4 @@
-import { betterAuth as createBetterAuth } from "better-auth";
+import { betterAuth, betterAuth as createBetterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { Context } from "hono";
 import { AppContext } from "./context";

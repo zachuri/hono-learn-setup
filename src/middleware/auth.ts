@@ -18,7 +18,3 @@ app.use("*", async (c, next) => {
 	c.set("session", session.session);
 	return next();
 });
-
-app.on(["POST", "GET"], "/api/auth/**", c => {
-	return c.get("auth").handler(c.req.raw);
-});
