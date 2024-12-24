@@ -13,6 +13,9 @@ export const initializeBetterAuth = (c: Context<AppContext>) => {
 
 	if (!betterAuthInstance) {
 		betterAuthInstance = createBetterAuth({
+			emailAndPassword: {
+				enabled: true,
+			},
 			database: drizzleAdapter(db, {
 				provider: "pg", // or "mysql", "sqlite"
 			}),

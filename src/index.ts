@@ -5,7 +5,7 @@ import httpStatus from "http-status";
 import { logger } from "hono/logger";
 import { initializeDB } from "./db";
 import { AppContext } from "./lib/context";
-import { comments, hello } from "./routers";
+import { auth, comments, hello } from "./routers";
 import { initializeBetterAuth } from "./lib/auth";
 import { ApiError } from "./utils/ApiError";
 import { errorHandler } from "./middleware/error";
@@ -46,6 +46,7 @@ app.get("/session", async c => {
 
 const routes = app
 	// .basePath("/api")
+	.route("/auth", auth)
 	.route("/hello", hello)
 	.route("/comments", comments);
 
