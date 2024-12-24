@@ -1,5 +1,7 @@
 export type Env = {
 	DATABASE_URL: string;
+	BETTER_AUTH_SECRET: string;
+	BETTER_URL: string;
 	WORKER_ENV: "production" | "development";
 	GITHUB_CLIENT_ID: string;
 	GITHUB_CLIENT_SECRET: string;
