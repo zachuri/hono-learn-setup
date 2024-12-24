@@ -9,10 +9,13 @@
 		"db:seed": "bun run ./src/db/seed.ts"
 	},
 	"dependencies": {
+		"@hono/sentry": "^1.2.0",
 		"@neondatabase/serverless": "^0.10.4",
 		"drizzle-orm": "^0.38.2",
 		"hono": "^4.6.14",
-		"postgres": "^3.4.5"
+		"http-status": "^2.0.0",
+		"postgres": "^3.4.5",
+		"zod-error": "^1.5.0"
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "^4.20241218.0",
